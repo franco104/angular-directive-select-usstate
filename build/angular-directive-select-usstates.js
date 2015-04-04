@@ -243,8 +243,9 @@ angular.module('templates-angular-directive-select-usstates', ['angular-directiv
 angular.module("angular-directive-select-usstates/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("angular-directive-select-usstates/index.tpl.html",
     "\n" +
-    "  <select ng-options=\"state.abbreviation as state.name for state in states\">\n" +
-    "    <option value=\"\">{{ emptyName }}</option>\n" +
+    "  <select>\n" +
+    "    <option value=''>Select State</option>\n" +
+    "    <option ng-repeat='state in states' value='{{state.abbreviation}}'>{{state.name}}</option>\n" +
     "  </select>\n" +
     "");
 }]);
