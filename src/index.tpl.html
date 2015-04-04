@@ -1,4 +1,5 @@
 
-  <select ng-options="state.abbreviation as state.name for state in states">
-    <option value="">{{ emptyName }}</option>
-  </select>
+<select>
+    <option value=''>Select State</option>
+    <option ng-repeat='state in states' value='{{state.abbreviation}}'>{{state.name}}</option>
+</select>
